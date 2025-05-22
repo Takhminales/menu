@@ -1,0 +1,40 @@
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестовое меню</title>
+    <style>
+        ul.menu, ul.menu ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li.collapsed > ul {
+            display: none;
+        }
+        li.active > a {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Главная страница</h1>
+
+{% draw_menu 'main_menu' %}
+
+
+
+<li>
+    {{ node.item.title }}
+    {% if node.item.description %}
+        — {{ node.item.description }}
+    {% endif %}
+</li>
+
+
+</body>
+</html>
+
+
