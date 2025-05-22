@@ -19,22 +19,28 @@
 
 1. Клонируйте проект:
 
-```bash
 git clone https://github.com/yourusername/django-tree-menu.git
 cd django-tree-menu
 
 
+2.
 python -m venv venv
 source venv/bin/activate  # для Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
 
-
+3.
 python manage.py migrate
 
+
+4.
 python manage.py createsuperuser
 
+
+5.
 Перейдите в админку: http://127.0.0.1:8000/admin
 
+6.
 Подключите тег и отобразите меню:
 
 
